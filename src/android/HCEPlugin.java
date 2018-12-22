@@ -41,7 +41,7 @@ public class HCEPlugin extends CordovaPlugin {
 
         } else if (action.equalsIgnoreCase(SEND_RESPONSE)) {
 
-            byte[] data = ConcatArrays("123".getBytes(), HexStringToByteArray("9000")); 
+            byte[] data = ConcatArrays(args.getString(0).getBytes(), HexStringToByteArray("9000")); 
 			Log.d(TAG, " CordovaData:" + Arrays.toString(data) );
 
             if (CordovaApduService.sendResponse(data)) {
