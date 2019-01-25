@@ -48,7 +48,7 @@ export declare class HCE extends IonicNativePlugin {
      * @param success {string} Failure Callback.
      *
      */
-    sendResponse(response: Uint8Array, success?: Function, failure?: Function): void;
+    sendResponse(response: string, success?: Function, failure?: Function): void;
 }
 export declare type HCECommandEvent = (command: Uint8Array) => void;
 export declare type HCEDeactivatedEvent = (command: number) => void;
